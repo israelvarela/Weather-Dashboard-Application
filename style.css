@@ -1,31 +1,17 @@
-/* CSS for Header Background and Text */
-
-.container {
-    text-align: center;
-    background-color: rgb(45, 45, 45);
-    font-size: x-large;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    margin: -1rem;
-    padding: 0.25rem;
+.forecast-card{
+  width: 155px;
+  transition: all 2s ease;
 }
 
-/* CSS for input form Text, Input Box, and Submit Button */
+.forecast-card:hover{
+  transform: scale(1.20);
 
-form {
-  margin: 35px;
-  border-left: 20px;
 }
 
-label {
-
-  font-weight: bold;
-  font-size: 1.5em;
+.bg-custom{
+  background-color: rgb(69, 111, 249);
 }
 
-input {
-  font-size: 1rem;
-  padding: .5em;
-  margin-top: 20px;
+body{
+  overflow-x: hidden;
 }
-
