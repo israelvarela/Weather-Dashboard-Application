@@ -18,30 +18,44 @@ $(document).ready(function () {
 
         renderWeatherData(searchInput.val());
 
-      //  Empty Search Field //
+        var city = $("#search-input").val();
+        if (city != '') {
+
+        } else {
+            $("#error").html('Field cannot be empty');
+        }
+
+        //  Empty Search Field //
         searchInput.val("");
 
     });
 
     // Render Weather Data When the Enter Button Is Pressed //
-    $('.click_on_enterkey').on('keyup',function(event){
-        if(event.keyCode == 13){
-          $(this).click();
-          renderWeatherData(searchInput.val());
+    $('.click_on_enterkey').on('keyup', function (event) {
+        if (event.keyCode == 13) {
+            $(this).click();
+            renderWeatherData(searchInput.val());
 
-      //  Empty Search Field //
-        searchInput.val("");
+            var city = $("#search-input").val();
+            if (city != '') {
+
+            } else {
+                $("#error").html('Field cannot be empty');
+            }
+            
+            //  Empty Search Field //
+            searchInput.val("");
 
         }
-      });
+    });
 
     // Display Weather Data When Saved City is Clicked // 
-    $(document).on("click", ".city-button", function(){
+    $(document).on("click", ".city-button", function () {
 
         var cityName = $(this).data("city");
 
         renderWeatherData(cityName);
-        
+
     })
 
 
@@ -142,7 +156,7 @@ $(document).ready(function () {
                     default: conditions = "secondary"
                 }
 
-        
+
                 // Updates The Weather Section Here With The Weather and Date for Today //
                 weatherDiv.html("<div class='card w-100 mb-4'><div class='card-body'><h2 class='card-title'>" + currentCity + " " + convertDate(oneCallResponse.current.dt) + "</h2> <p class='card-text'>Temperature: " + oneCallResponse.current.temp + " °F</p> <p class='card-text'>Humidity: " + oneCallResponse.current.humidity + "%</p><p class='card-text'>Wind Speed: " + oneCallResponse.current.wind_speed + " MPH</p> <p class='card-text'>UV Index: <button type='button' class='btn btn-" + conditions + "'>" + uvIndex + "</button></p></div></div>");
 
