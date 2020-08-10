@@ -101,7 +101,7 @@ $(document).ready(function () {
     function renderWeatherData(cityName) {
 
         // Build The queryURL Here With The API Key and City Name //
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityName + "&appid=" + APIKey;
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityName + "&appid=" + APIKey;
 
         // AJAX Function Calls The OpenWeather API // 
         $.ajax({
@@ -163,7 +163,7 @@ $(document).ready(function () {
                 weatherSection.append(weatherDiv);
 
                 // Updates The Icon On The Header //
-                navWeatherIcon.attr("src", "http://openweathermap.org/img/wn/" + oneCallResponse.current.weather[0].icon + ".png");
+                navWeatherIcon.attr("src", "https://openweathermap.org/img/wn/" + oneCallResponse.current.weather[0].icon + ".png");
 
                 // Displays The Title of The Forecast //
                 var forecastTitle = $("<h2>");
@@ -186,7 +186,7 @@ $(document).ready(function () {
 
                     var forecastDate = convertDate(dailyForecast[i].dt);
 
-                    var iconURL = "http://openweathermap.org/img/wn/" + dailyForecast[i].weather[0].icon + "@2x.png";
+                    var iconURL = "https://openweathermap.org/img/wn/" + dailyForecast[i].weather[0].icon + "@2x.png";
 
                     forecastCard.html("<div class='card bg-custom forecast-card m-2'> <div class='card-body'> <h5 class='card-title'>" + forecastDate + "</h5> <img src='" + iconURL + "' alt='weather-icon'><p class='card-text'> Temp: " + dailyForecast[i].temp.day + " °F </p> <p class='card-text'>Humidity: " + dailyForecast[i].humidity + "%</p> </div> </div>");
 
