@@ -1,4 +1,4 @@
-# Weather-Dashboard-Application
+# Weather-Dashboard-Application - https://israelvarela.github.io/Weather-Dashboard-Application/
 
 ## User Story
 
@@ -23,4 +23,3 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
-![deployed-weather-dashboard-app](https://user-images.githubusercontent.com/62815477/89745712-431c9280-da7b-11ea-9f4b-98a020c94595.png)
