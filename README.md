@@ -1,4 +1,6 @@
-# Weather-Dashboard-Application - https://israelvarela.github.io/Weather-Dashboard-Application/
+# Weather-Dashboard-Application
+
+https://israelvarela.github.io/Weather-Dashboard-Application/
 
 ## User Story
 
